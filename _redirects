@@ -1,0 +1,87 @@
+# הפניות 301 מהאתר הישן לחדש — Cloudflare Pages קורא את הקובץ הזה אוטומטית
+# פורמט:  <כתובת ישנה>  <כתובת חדשה>  <קוד>
+
+# --- עמודי הבית והרשימות הישנים ---
+/zochmer-v2.html                                     /                             301
+/zochmer-site/zochmer-v2.html                        /                             301
+/all-articles.html                                   /                             301
+/zochmer-site/all-articles.html                      /                             301
+/zochmer-site/                                       /                             301
+/zochmer-site/index.html                             /                             301
+
+# --- עמודים סטטיים ישנים ---
+/about.html                                             /about.html                     301
+/contact.html                                           /contact.html                   301
+/privacy.html                                           /privacy.html                   301
+/zochmer-site/about.html                                /about.html                     301
+/zochmer-site/contact.html                              /contact.html                   301
+/zochmer-site/privacy.html                              /privacy.html                   301
+
+# --- קטגוריות שאוחדו ---
+/c/apple.html                                           /c/iphone.html                  301
+
+# --- 30 הכתבות הישנות -> הכתבה עצמה באתר החדש ---
+/articles/01-iphone-future.html                         /a/iphone-18-future.html        301
+/zochmer-site/articles/01-iphone-future.html            /a/iphone-18-future.html        301
+/articles/02-samsung-zfold8-ultra.html                  /a/samsung-z-fold8-ultra.html   301
+/zochmer-site/articles/02-samsung-zfold8-ultra.html     /a/samsung-z-fold8-ultra.html   301
+/articles/03-iphone-17-pro-max.html                     /a/iphone-17-pro-max.html       301
+/zochmer-site/articles/03-iphone-17-pro-max.html        /a/iphone-17-pro-max.html       301
+/articles/04-samsung-s26-ultra.html                     /a/samsung-s26-ultra.html       301
+/zochmer-site/articles/04-samsung-s26-ultra.html        /a/samsung-s26-ultra.html       301
+/articles/05-xiaomi-17-ultra.html                       /a/xiaomi-17-ultra.html         301
+/zochmer-site/articles/05-xiaomi-17-ultra.html          /a/xiaomi-17-ultra.html         301
+/articles/06-samsung-zflip8.html                        /a/samsung-z-flip8.html         301
+/zochmer-site/articles/06-samsung-zflip8.html           /a/samsung-z-flip8.html         301
+/articles/07-xiaomi-17t-pro.html                        /a/xiaomi-17t-pro.html          301
+/zochmer-site/articles/07-xiaomi-17t-pro.html           /a/xiaomi-17t-pro.html          301
+/articles/08-ios-vs-android.html                        /a/ios-vs-android.html          301
+/zochmer-site/articles/08-ios-vs-android.html           /a/ios-vs-android.html          301
+/articles/09-phones-2027.html                           /a/phones-2027.html             301
+/zochmer-site/articles/09-phones-2027.html              /a/phones-2027.html             301
+/articles/10-ai-arabic.html                             /a/ai-tools-arabic.html         301
+/zochmer-site/articles/10-ai-arabic.html                /a/ai-tools-arabic.html         301
+/articles/11-wifi-guide.html                            /a/wifi-slow-fix.html           301
+/zochmer-site/articles/11-wifi-guide.html               /a/wifi-slow-fix.html           301
+/articles/12-mesh-systems.html                          /a/router-vs-mesh.html          301
+/zochmer-site/articles/12-mesh-systems.html             /a/router-vs-mesh.html          301
+/articles/13-windows-speed.html                         /a/windows-slow-fix.html        301
+/zochmer-site/articles/13-windows-speed.html            /a/windows-slow-fix.html        301
+/articles/14-google-pixel-9-pro.html                    /a/google-pixel-9-pro.html      301
+/zochmer-site/articles/14-google-pixel-9-pro.html       /a/google-pixel-9-pro.html      301
+/articles/15-budget-phones-guide.html                   /a/budget-phones-guide.html     301
+/zochmer-site/articles/15-budget-phones-guide.html      /a/budget-phones-guide.html     301
+/articles/16-android-speed.html                         /a/android-slow-fix.html        301
+/zochmer-site/articles/16-android-speed.html            /a/android-slow-fix.html        301
+/articles/17-gaming-platforms.html                      /a/gaming-platforms.html        301
+/zochmer-site/articles/17-gaming-platforms.html         /a/gaming-platforms.html        301
+/articles/18-console-comparison.html                    /a/console-comparison.html      301
+/zochmer-site/articles/18-console-comparison.html       /a/console-comparison.html      301
+/articles/19-gaming-phones.html                         /a/gaming-phones.html           301
+/zochmer-site/articles/19-gaming-phones.html            /a/gaming-phones.html           301
+/articles/20-pc-gpu-guide.html                          /a/pc-gpu-guide.html            301
+/zochmer-site/articles/20-pc-gpu-guide.html             /a/pc-gpu-guide.html            301
+/articles/21-poco-f8-ultra.html                         /a/poco-f8-ultra.html           301
+/zochmer-site/articles/21-poco-f8-ultra.html            /a/poco-f8-ultra.html           301
+/articles/22-iphone-air.html                            /a/iphone-air.html              301
+/zochmer-site/articles/22-iphone-air.html               /a/iphone-air.html              301
+/articles/23-oneplus-12.html                            /a/oneplus-12.html              301
+/zochmer-site/articles/23-oneplus-12.html               /a/oneplus-12.html              301
+/articles/24-samsung-a-series-guide.html                /a/samsung-a-series-guide.html  301
+/zochmer-site/articles/24-samsung-a-series-guide.html   /a/samsung-a-series-guide.html  301
+/articles/25-realme-12-pro.html                         /a/realme-12-pro.html           301
+/zochmer-site/articles/25-realme-12-pro.html            /a/realme-12-pro.html           301
+/articles/26-pixel-fold.html                            /a/google-pixel-fold.html       301
+/zochmer-site/articles/26-pixel-fold.html               /a/google-pixel-fold.html       301
+/articles/27-oneplus-nord-4.html                        /a/oneplus-nord-4.html          301
+/zochmer-site/articles/27-oneplus-nord-4.html           /a/oneplus-nord-4.html          301
+/articles/28-samsung-s26.html                           /a/samsung-s26.html             301
+/zochmer-site/articles/28-samsung-s26.html              /a/samsung-s26.html             301
+/articles/29-redmi-note-15-guide.html                   /a/redmi-note-15-guide.html     301
+/zochmer-site/articles/29-redmi-note-15-guide.html      /a/redmi-note-15-guide.html     301
+/articles/30-oneplus-open.html                          /a/oneplus-open.html            301
+/zochmer-site/articles/30-oneplus-open.html             /a/oneplus-open.html            301
+
+# --- כל השאר ---
+/zochmer-site/*                                      /                             301
+/*                                                      /404.html                       404

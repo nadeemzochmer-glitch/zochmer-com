@@ -1,0 +1,23 @@
+# קבצים שנוצרים אוטומטית ע"י node build.mjs — לא לשמור ב-git, Cloudflare Pages
+# מריץ את הבנייה בכל deploy ומייצר אותם מחדש מ-assets/js/content.js
+/index.html
+/about.html
+/author.html
+/contact.html
+/disclosure.html
+/fixes.html
+/privacy.html
+/prices.html
+/saved.html
+/search.html
+/terms.html
+/tools.html
+/404.html
+/robots.txt
+/sitemap.xml
+/feed.xml
+/a/
+/c/
+/assets/js/search-index.js
+
+node_modules/

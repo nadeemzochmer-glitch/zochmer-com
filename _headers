@@ -1,0 +1,22 @@
+# כותרות HTTP — Cloudflare Pages קורא את הקובץ הזה אוטומטית
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(self), microphone=(), camera=()
+
+# קבצי עיצוב וקוד — מטמון שנה. בטוח כי כל קובץ נטען עם ?v=<חותם תוכן>,
+# והחותם משתנה לבד בכל build — אז גרסה חדשה תמיד נטענת מיד.
+/assets/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# עמודי HTML — תמיד לבדוק אם יש גרסה חדשה
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
