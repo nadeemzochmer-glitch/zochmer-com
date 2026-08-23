@@ -1,0 +1,53 @@
+name: Auto content (news → articles)
+
+on:
+  schedule:
+    # Sunday and Wednesday, 06:00 UTC — adjust to taste.
+    - cron: '0 6 * * 0,3'
+  workflow_dispatch: {} # lets you trigger a run manually from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: auto-content
+  cancel-in-progress: false
+
+jobs:
+  auto-content:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run auto-content pipeline
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Optional tuning — override as repo Variables (Settings → Secrets and variables → Actions → Variables) if you want different defaults:
+          AUTO_CONTENT_MAX: ${{ vars.AUTO_CONTENT_MAX || '2' }}
+          AUTO_CONTENT_MAX_AGE_DAYS: ${{ vars.AUTO_CONTENT_MAX_AGE_DAYS || '5' }}
+          AUTO_CONTENT_MODEL: ${{ vars.AUTO_CONTENT_MODEL || 'claude-sonnet-4-5' }}
+        run: node scripts/auto-content/run.mjs
+
+      - name: Commit and push if there's something to publish
+        run: |
+          git config user.name "zochmer-auto-content[bot]"
+          git config user.email "actions@users.noreply.github.com"
+
+          if git diff --quiet -- assets/js/content.js scripts/auto-content/seen.json; then
+            echo "No changes this run — nothing to publish."
+            exit 0
+          fi
+
+          git add assets/js/content.js scripts/auto-content/seen.json
+
+          MSG_FILE="scripts/auto-content/last-commit-message.txt"
+          if [ ! -f "$MSG_FILE" ]; then
+            echo "🤖 Auto content update" > "$MSG_FILE"
+          fi
+
+          git commit -F "$MSG_FILE"
+          git push

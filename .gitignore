@@ -21,3 +21,6 @@
 /assets/js/search-index.js
 
 node_modules/
+
+# scratch file written by scripts/auto-content/run.mjs each run — not content
+/scripts/auto-content/last-commit-message.txt

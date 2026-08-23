@@ -1,0 +1,12 @@
+[
+  { "name": "The Verge", "url": "https://www.theverge.com/rss/index.xml", "hint": "general tech" },
+  { "name": "TechCrunch", "url": "https://techcrunch.com/feed/", "hint": "general tech, AI, startups" },
+  { "name": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/index", "hint": "computers, security, deep tech" },
+  { "name": "9to5Mac", "url": "https://9to5mac.com/feed/", "hint": "iPhone, Apple" },
+  { "name": "9to5Google", "url": "https://9to5google.com/feed/", "hint": "Android, Google" },
+  { "name": "Android Police", "url": "https://www.androidpolice.com/feed/", "hint": "Android, mobile" },
+  { "name": "SamMobile", "url": "https://www.sammobile.com/feed/", "hint": "Samsung" },
+  { "name": "BleepingComputer", "url": "https://www.bleepingcomputer.com/feed/", "hint": "security" },
+  { "name": "Engadget", "url": "https://www.engadget.com/rss.xml", "hint": "general tech, gadgets" },
+  { "name": "MakeUseOf", "url": "https://www.makeuseof.com/feed/", "hint": "how-to / tutorials" }
+]
