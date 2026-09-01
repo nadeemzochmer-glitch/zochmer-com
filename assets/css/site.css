@@ -74,6 +74,21 @@ h1,h2,h3{line-height:1.25;margin:0;font-family:var(--font-h);letter-spacing:0}
 .sk--sub{height:18px;width:52%;margin-block-end:14px}
 .sk--p{height:11px;width:100%}.sk--p2{height:11px;width:78%}
 
+/* ---------- شريط مناسبات (بانر موسمي قابل للإغلاق) ---------- */
+.sybanner{position:relative;overflow:hidden;
+  background:linear-gradient(90deg, var(--ac), color-mix(in srgb, var(--ac) 55%, #FFB347));
+  color:var(--acx)}
+.sybanner__in{max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:center;
+  gap:10px;padding:9px 46px;font-size:.8125rem;line-height:1.5;flex-wrap:wrap;text-align:center}
+.sybanner__ic{font-size:1.05rem;line-height:1}
+.sybanner__t strong{font-weight:800}
+.sybanner__x{position:absolute;inset-inline-start:10px;top:50%;transform:translateY(-50%);
+  background:rgba(255,255,255,.16);border:0;border-radius:var(--r-pill);color:inherit;
+  width:26px;height:26px;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:.9}
+.sybanner__x:hover{opacity:1;background:rgba(255,255,255,.28)}
+.sybanner__x svg{width:15px;height:15px}
+@media(max-width:640px){.sybanner__in{font-size:.75rem;padding:8px 40px}}
+
 /* ---------- 3. الترويسة ---------- */
 .hd{position:sticky;top:0;z-index:40;background:color-mix(in srgb, var(--bg) 88%, transparent);
   backdrop-filter:blur(14px);border-block-end:1px solid var(--line)}

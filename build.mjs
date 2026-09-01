@@ -463,7 +463,23 @@ function quickRail(l, active) {
 }
 
 function header(l, active = '') {
-  return `<header class="hd" id="hd"><div class="wrap hd__in">
+  return `<div class="sybanner" id="sybanner" hidden>
+  <div class="sybanner__in">
+    <span class="sybanner__ic" aria-hidden="true">📚</span>
+    <span class="sybanner__t"><strong>بداية سنة دراسية موفقة!</strong> بالتوفيق لكل طلابنا وطالباتنا بالسنة الجديدة 🎒</span>
+  </div>
+  <button class="sybanner__x" id="sybannerClose" aria-label="إغلاق">${ico('close')}</button>
+</div>
+<script>(function(){try{
+  var KEY='sy_banner_2026_x';
+  var until=new Date('2026-09-03T00:00:00+03:00').getTime();
+  var el=document.getElementById('sybanner');
+  if(!el||Date.now()>until||localStorage.getItem(KEY)==='1')return;
+  el.hidden=false;
+  var x=document.getElementById('sybannerClose');
+  if(x)x.addEventListener('click',function(){el.hidden=true;try{localStorage.setItem(KEY,'1');}catch(e){}});
+}catch(e){}})();</script>
+<header class="hd" id="hd"><div class="wrap hd__in">
   <button class="ib" id="openMenu" aria-expanded="false" aria-controls="drawer" aria-label="فتح القائمة">${ico('burger')}</button>
   <a class="bd" href="${l.home}" aria-label="${esc(SITE.name)} — الصفحة الرئيسية"><span class="bmk">${ico('bolt', 22)}</span><span class="bd__t">${esc(SITE.name)}<i class="bd__s">${esc(SITE.short || '')}</i></span></a>
   <nav class="nv" aria-label="التنقّل الرئيسي">${megaNav(l, active)}</nav>
