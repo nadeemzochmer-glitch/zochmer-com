@@ -465,8 +465,10 @@ function quickRail(l, active) {
 function header(l, active = '') {
   return `<div class="sybanner" id="sybanner" hidden>
   <div class="sybanner__in">
+    <span class="sybanner__spark" aria-hidden="true">✨</span>
     <span class="sybanner__ic" aria-hidden="true">📚</span>
     <span class="sybanner__t"><strong>بداية سنة دراسية موفقة!</strong> بالتوفيق لكل طلابنا وطالباتنا بالسنة الجديدة 🎒</span>
+    <span class="sybanner__spark" aria-hidden="true">✨</span>
   </div>
   <button class="sybanner__x" id="sybannerClose" aria-label="إغلاق">${ico('close')}</button>
 </div>

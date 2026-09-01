@@ -75,19 +75,35 @@ h1,h2,h3{line-height:1.25;margin:0;font-family:var(--font-h);letter-spacing:0}
 .sk--p{height:11px;width:100%}.sk--p2{height:11px;width:78%}
 
 /* ---------- شريط مناسبات (بانر موسمي قابل للإغلاق) ---------- */
-.sybanner{position:relative;overflow:hidden;
-  background:linear-gradient(90deg, var(--ac), color-mix(in srgb, var(--ac) 55%, #FFB347));
-  color:var(--acx)}
-.sybanner__in{max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:center;
-  gap:10px;padding:9px 46px;font-size:.8125rem;line-height:1.5;flex-wrap:wrap;text-align:center}
-.sybanner__ic{font-size:1.05rem;line-height:1}
+.sybanner{position:relative;overflow:hidden;isolation:isolate;
+  background:linear-gradient(90deg, var(--ac), color-mix(in srgb, var(--ac) 45%, #FF3D8A) 50%, color-mix(in srgb, var(--ac) 55%, #FFB347));
+  background-size:200% 100%;
+  color:var(--acx);
+  animation:sybanner-bg 6s ease-in-out infinite, sybanner-glow 2.2s ease-in-out infinite}
+.sybanner::before{content:"";position:absolute;inset-block:0;inset-inline-start:-45%;width:30%;z-index:1;
+  background:linear-gradient(75deg, transparent, rgba(255,255,255,.65) 45%, transparent 75%);
+  transform:skewX(-20deg);animation:sybanner-shine 2.8s ease-in-out infinite}
+.sybanner__in{position:relative;z-index:2;max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:center;
+  gap:10px;padding:10px 46px;font-size:.8125rem;line-height:1.5;flex-wrap:wrap;text-align:center;
+  text-shadow:0 1px 3px rgba(0,0,0,.18)}
+.sybanner__ic{font-size:1.2rem;line-height:1;display:inline-block;animation:sybanner-bounce 1.6s ease-in-out infinite}
+.sybanner__spark{display:inline-block;animation:sybanner-spark 1.4s ease-in-out infinite}
+.sybanner__spark:nth-child(2){animation-delay:.25s}
 .sybanner__t strong{font-weight:800}
-.sybanner__x{position:absolute;inset-inline-start:10px;top:50%;transform:translateY(-50%);
-  background:rgba(255,255,255,.16);border:0;border-radius:var(--r-pill);color:inherit;
+.sybanner__x{position:absolute;z-index:3;inset-inline-start:10px;top:50%;transform:translateY(-50%);
+  background:rgba(255,255,255,.18);border:0;border-radius:var(--r-pill);color:inherit;
   width:26px;height:26px;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:.9}
-.sybanner__x:hover{opacity:1;background:rgba(255,255,255,.28)}
+.sybanner__x:hover{opacity:1;background:rgba(255,255,255,.3)}
 .sybanner__x svg{width:15px;height:15px}
-@media(max-width:640px){.sybanner__in{font-size:.75rem;padding:8px 40px}}
+@keyframes sybanner-shine{0%{inset-inline-start:-45%}60%,100%{inset-inline-start:130%}}
+@keyframes sybanner-bg{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@keyframes sybanner-glow{0%,100%{box-shadow:0 2px 14px color-mix(in srgb, var(--ac) 35%, transparent)}50%{box-shadow:0 4px 26px color-mix(in srgb, var(--ac) 70%, transparent)}}
+@keyframes sybanner-bounce{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-3px) rotate(-8deg)}}
+@keyframes sybanner-spark{0%,100%{opacity:.4;transform:scale(.85)}50%{opacity:1;transform:scale(1.15)}}
+@media(max-width:640px){.sybanner__in{font-size:.75rem;padding:9px 40px}}
+@media (prefers-reduced-motion: reduce){
+  .sybanner,.sybanner::before,.sybanner__ic,.sybanner__spark{animation:none}
+}
 
 /* ---------- 3. الترويسة ---------- */
 .hd{position:sticky;top:0;z-index:40;background:color-mix(in srgb, var(--bg) 88%, transparent);
