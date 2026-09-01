@@ -526,6 +526,7 @@ ${page === 'search.html' ? `<script src="${vurl(l.asset(''), 'assets/js/search-i
 <script src="${vurl(l.asset(''), 'assets/js/site.js')}"></script>
 <script src="${vurl(l.asset(''), 'assets/js/search.js')}"></script>
 <script src="${vurl(l.asset(''), 'assets/js/tools.js')}" defer></script>
+<script src="${vurl(l.asset(''), 'assets/js/chat-widget.js')}" defer></script>
 ${SITE.analytics ? `<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"${SITE.analytics}"}'></script>` : ''}
 </body></html>
 `;
