@@ -2,8 +2,8 @@ name: Auto content (news → articles)
 
 on:
   schedule:
-    # Sunday and Wednesday, 06:00 UTC — adjust to taste.
-    - cron: '0 6 * * 0,3'
+    # Every 30 minutes — adjust to taste. (Was: Sunday and Wednesday 06:00 UTC.)
+    - cron: '*/30 * * * *'
   workflow_dispatch: {} # lets you trigger a run manually from the Actions tab
 
 permissions:
@@ -27,7 +27,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           # Optional tuning — override as repo Variables (Settings → Secrets and variables → Actions → Variables) if you want different defaults:
-          AUTO_CONTENT_MAX: ${{ vars.AUTO_CONTENT_MAX || '2' }}
+          AUTO_CONTENT_MAX: ${{ vars.AUTO_CONTENT_MAX || '1' }}
           AUTO_CONTENT_MAX_AGE_DAYS: ${{ vars.AUTO_CONTENT_MAX_AGE_DAYS || '5' }}
           AUTO_CONTENT_MODEL: ${{ vars.AUTO_CONTENT_MODEL || 'claude-sonnet-4-5' }}
         run: node scripts/auto-content/run.mjs
